@@ -1,0 +1,52 @@
+# -*- coding: utf-8 -*-
+#     info@fakturacion.com
+from odoo import models, fields, api
+import logging
+
+_logger = logging.getLogger(__name__)
+
+
+class CabysProducto(models.Model):
+    _name = 'cabys.producto'
+
+    name     = fields.Char('Descripción del bien o servicio')
+    codigo   = fields.Char('Código Cabys')
+    impuesto = fields.Float('Impuesto', digits=(12, 2))
+
+    cabys_categoria8_id = fields.Many2one(comodel_name='cabys.categoria8', string='Categoría 8', readonly=True)
+    cabys_categoria7_id = fields.Many2one(related='cabys_categoria8_id.cabys_categoria7_id', string='Categoría 7', readonly=True)
+    cabys_categoria6_id = fields.Many2one(related='cabys_categoria7_id.cabys_categoria6_id', string='Categoría 6', readonly=True)
+    cabys_categoria5_id = fields.Many2one(related='cabys_categoria6_id.cabys_categoria5_id', string='Categoría 5', readonly=True)
+    cabys_categoria4_id = fields.Many2one(related='cabys_categoria5_id.cabys_categoria4_id', string='Categoría 4', readonly=True)
+    cabys_categoria3_id = fields.Many2one(related='cabys_categoria4_id.cabys_categoria3_id', string='Categoría 3', readonly=True)
+    cabys_categoria2_id = fields.Many2one(related='cabys_categoria3_id.cabys_categoria2_id', string='Categoría 2', readonly=True)
+    cabys_categoria1_id = fields.Many2one(related='cabys_categoria2_id.cabys_categoria1_id', string='Categoría 1', readonly=True)
+
+    _sql_constraints = [('codigo_uniq', 'unique (codigo)', 'Ya existe un registro con el mismo código.'),]
+
+    @api.multi
+    @api.depends('name', 'codigo', 'cabys_categoria8_id', 'cabys_categoria7_id', 'cabys_categoria6_id')
+    def name_get(self):
+        result = []
+        for product in self:
+            # get all categories names
+            categories = [product.cabys_categoria8_id.name, product.cabys_categoria7_id.name, product.cabys_categoria6_id.name]
+            # eliminate duplicates
+            categories = list(set(categories))
+            # join category names
+            categories = '[%s]' % '] ['.join(categories)
+            # make one big nice line
+            name = '%s %s %s' % (product.codigo, product.name, categories)
+            result.append((product.id, name))
+        return result
+
+    @api.model
+    def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
+        """ search in name, code and category"""
+        args = args or []
+        # search in name, codigo and categories
+        domain = args + ['|', ('name', operator, name), 
+                            '|', ('codigo', operator, name), 
+                                '|', ('cabys_categoria8_id.name', operator, name), 
+                                    '|', ('cabys_categoria7_id.name', operator, name), ('cabys_categoria6_id.name', operator, name)]
+        return super(CabysProducto, self).search(domain, limit=limit).name_get()
