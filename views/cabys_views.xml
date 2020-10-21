@@ -126,6 +126,6 @@
 	<menuitem id="menu_categoria6" name="Categoría 6" parent="menu_cabys" sequence="36" action="action_categoria6"/>
 	<menuitem id="menu_categoria7" name="Categoría 7" parent="menu_cabys" sequence="37" action="action_categoria7"/>
 	<menuitem id="menu_categoria8" name="Categoría 8" parent="menu_cabys" sequence="38" action="action_categoria8"/>
-	<menuitem id="menu_producto"   name="Productos"   parent="menu_cabys" sequence="39" action="action_productos"/>
+	<menuitem id="menu_producto"   name="Catálogo Cabys"   parent="menu_cabys" sequence="39" action="action_productos"/>
 
 </data></odoo>

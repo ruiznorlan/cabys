@@ -173,7 +173,7 @@ class CabysCatalogImportWizard(models.TransientModel):
                     record_id = self.env['cabys.producto'].create(product)
                     products_new.append(product['codigo'])
             # product codes in db and not in catalog file should be deleted
-            product_codes = all_products.keys()
+            product_codes = list(all_products.keys())
             record_ids = self.env['cabys.producto'].search([('codigo', 'not in', product_codes)])
             products_deleted = record_ids.mapped('codigo')
             _logger.info('Finished updating Cabys catalog')
