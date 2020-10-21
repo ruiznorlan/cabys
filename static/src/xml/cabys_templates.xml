@@ -6,9 +6,9 @@
 
             <t  t-jquery="button.o_list_button_add" t-operation="after">
 
-                <button t-if="widget.modelName == 'cabys.producto'" type="button" class="btn btn-primary btn-sm oe_cabys_import_button" accesskey="f">
+                <button t-if="widget.modelName == 'cabys.producto'" type="button" class="btn btn-primary oe_cabys_import_button" accesskey="f">
 
-                    Importar Catálogo
+                    Actualizar Catálogo Cabys
 
                 </button> 
 

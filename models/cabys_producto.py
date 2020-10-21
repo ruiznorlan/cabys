@@ -8,10 +8,11 @@ _logger = logging.getLogger(__name__)
 
 class CabysProducto(models.Model):
     _name = 'cabys.producto'
+    _description = 'Catálogo de bienes y servicios (Cabys)'
 
-    name     = fields.Char('Descripción del bien o servicio')
-    codigo   = fields.Char('Código Cabys')
-    impuesto = fields.Float('Impuesto', digits=(12, 2))
+    name     = fields.Char('Descripción del bien o servicio', readonly=True)
+    codigo   = fields.Char('Código Cabys', readonly=True)
+    impuesto = fields.Float('Impuesto', digits=(12, 2), readonly=True)
 
     cabys_categoria8_id = fields.Many2one(comodel_name='cabys.categoria8', string='Categoría 8', readonly=True)
     cabys_categoria7_id = fields.Many2one(related='cabys_categoria8_id.cabys_categoria7_id', string='Categoría 7', readonly=True)
@@ -29,7 +30,7 @@ class CabysProducto(models.Model):
     def name_get(self):
         result = []
         for product in self:
-            # get all categories names
+            # get all category names
             categories = [product.cabys_categoria8_id.name, product.cabys_categoria7_id.name, product.cabys_categoria6_id.name]
             # eliminate duplicates
             categories = list(set(categories))

@@ -36,9 +36,7 @@ odoo.define('cabys.cabys_import_button', function (require) {
                     views: [[false, 'form']],
                     context: context,
                 });
-    
-                //implement your click logic here
-    
+       
             }
     
         });
