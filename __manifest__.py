@@ -12,6 +12,7 @@
     ],
     'data': [
         'views/cabys_views.xml',
+        'views/product_product.xml',
         'views/product_template.xml',
         'views/product_category.xml',
         'views/assets.xml',
