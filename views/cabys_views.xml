@@ -57,35 +57,6 @@
 		<field name="view_mode">tree,form</field>
 	</record>
 
-
-	<record id="cabys_productos_tree_view" model="ir.ui.view">
-		<field name="name">cabys.producto.tree</field>
-		<field name="model">cabys.producto</field>
-		<field name="type">tree</field>
-		<field name="arch" type="xml">
-			<tree string="Catálogo de Productos Cabys">
-				<field name="codigo"/>
-				<field name="name"/>
-				<field name="impuesto"/>
-				<field name="cabys_categoria8_id"/>
-				<field name="cabys_categoria7_id"/>
-				<field name="cabys_categoria6_id"/>
-				<field name="cabys_categoria5_id"/>
-				<field name="cabys_categoria4_id"/>
-				<field name="cabys_categoria3_id"/>
-				<field name="cabys_categoria2_id"/>
-				<field name="cabys_categoria1_id"/>
-			</tree>
-		</field>
-	</record>
-
-	<record id="action_productos" model="ir.actions.act_window">
-		<field name="name">Productos</field>
-		<field name="res_model">cabys.producto</field>
-		<field name="view_type">form</field>
-		<field name="view_mode">tree,form</field>
-	</record>
-
 	<record id="cabys_catalog_import_wizard_form_view" model="ir.ui.view">
 		<field name="name">cabys.catalog.import.wizard.form</field>
 		<field name="model">cabys.catalog.import.wizard</field>
