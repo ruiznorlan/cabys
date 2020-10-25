@@ -5,7 +5,7 @@
     'author': 'info@fakturacion.com',
     'website': "https://github.com/odoocr/cabys",
     'category': 'Account',
-    'version': '12.0.0.0.1',
+    'version': '11.0.0.0.1',
     'license': 'OPL-1',
     'depends': [
         'base', 'product',
