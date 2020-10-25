@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from odoo import api, fields, models, _
-from odoo.tests.common import Form
 from xlrd import open_workbook
 import logging
 import base64
