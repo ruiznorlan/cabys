@@ -17,6 +17,7 @@
         'views/product_template_views.xml',
         'views/product_category_views.xml',
         'views/assets.xml',
+        'views/res_company_views.xml',
 
         'security/ir.model.access.csv',
 
