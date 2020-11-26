@@ -6,9 +6,9 @@
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_only_form_view"/>
         <field name="arch" type="xml">
-
-			<xpath expr="//field[@name='default_code']" position="after">
+   	    <xpath expr="//field[@name='default_code']" position="after">
                 <field name="cabys_code"/>
+                <field name="cabys_tax"/>
             </xpath>
 
             <xpath expr="//page[@name='general_information']" position="after">

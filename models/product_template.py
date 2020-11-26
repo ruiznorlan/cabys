@@ -14,3 +14,4 @@ class ProductTemplate(models.Model):
 
     cabys_product_id = fields.Many2one("cabys.producto", "Producto en el catálogo Cabys")
     cabys_code = fields.Char(related='cabys_product_id.codigo', readonly=True)
+    cabys_tax = fields.Float(related='cabys_product_id.impuesto', readonly=True)
