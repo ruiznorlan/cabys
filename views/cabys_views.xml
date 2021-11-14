@@ -4,56 +4,48 @@
 	<record id="action_categoria1" model="ir.actions.act_window">
 		<field name="name">Categoria 1</field>
 		<field name="res_model">cabys.categoria1</field>
-		<field name="view_type">form</field>
 		<field name="view_mode">tree,form</field>
 	</record>
 
 	<record id="action_categoria2" model="ir.actions.act_window">
 		<field name="name">Categoria 2</field>
 		<field name="res_model">cabys.categoria2</field>
-		<field name="view_type">form</field>
 		<field name="view_mode">tree,form</field>
 	</record>
 
 	<record id="action_categoria3" model="ir.actions.act_window">
 		<field name="name">Categoria 3</field>
 		<field name="res_model">cabys.categoria3</field>
-		<field name="view_type">form</field>
 		<field name="view_mode">tree,form</field>
 	</record>
 
 	<record id="action_categoria4" model="ir.actions.act_window">
 		<field name="name">Categoria 4</field>
 		<field name="res_model">cabys.categoria4</field>
-		<field name="view_type">form</field>
 		<field name="view_mode">tree,form</field>
 	</record>
 
 	<record id="action_categoria5" model="ir.actions.act_window">
 		<field name="name">Categoria 5</field>
 		<field name="res_model">cabys.categoria5</field>
-		<field name="view_type">form</field>
 		<field name="view_mode">tree,form</field>
 	</record>
 
 	<record id="action_categoria6" model="ir.actions.act_window">
 		<field name="name">Categoria 6</field>
 		<field name="res_model">cabys.categoria6</field>
-		<field name="view_type">form</field>
 		<field name="view_mode">tree,form</field>
 	</record>
 
 	<record id="action_categoria7" model="ir.actions.act_window">
 		<field name="name">Categoria 7</field>
 		<field name="res_model">cabys.categoria7</field>
-		<field name="view_type">form</field>
 		<field name="view_mode">tree,form</field>
 	</record>
 
 	<record id="action_categoria8" model="ir.actions.act_window">
 		<field name="name">Categoria 8</field>
 		<field name="res_model">cabys.categoria8</field>
-		<field name="view_type">form</field>
 		<field name="view_mode">tree,form</field>
 	</record>
 

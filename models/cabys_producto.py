@@ -29,7 +29,6 @@ class CabysProducto(models.Model):
 
     _sql_constraints = [('codigo_uniq', 'unique (codigo)', 'Ya existe un registro con el mismo código.'),]
 
-    @api.multi
     @api.depends('name', 'codigo', 'cabys_categoria8_id', 'cabys_categoria7_id', 'cabys_categoria6_id', 'cabys_categoria5_id')
     def name_get(self):
         result = []
@@ -47,15 +46,13 @@ class CabysProducto(models.Model):
 
             result.append((product.id, name))
         return result
-
+        
     @api.model
     def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
         """ search in name, code and category"""
         args = args or []
-        # search in name, codigo and categories
-        domain = args + ['|', ('name', operator, name), 
-                            '|', ('codigo', operator, name), 
-                                '|', ('cabys_categoria8_id.name', operator, name), 
-                                    '|', ('cabys_categoria7_id.name', operator, name), 
-                                             ('cabys_categoria6_id.name', operator, name)]
-        return super(CabysProducto, self).search(domain, limit=limit).name_get()
+        domain = []
+        if name:
+            # search in name, codigo and categories
+            domain = args + ['|', ('name', operator, name), ('codigo', operator, name)]
+        return self._search(domain + args, limit=limit, access_rights_uid=name_get_uid)
