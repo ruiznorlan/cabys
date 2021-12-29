@@ -81,14 +81,15 @@
 	</record>
 
 	<menuitem id="menu_cabys" name="Cabys" parent="account.account_account_menu" sequence="30"/>
-	<menuitem id="menu_categoria1" name="Categoría 1" parent="menu_cabys" sequence="31" action="action_categoria1"/>
-	<menuitem id="menu_categoria2" name="Categoría 2" parent="menu_cabys" sequence="32" action="action_categoria2"/>
-	<menuitem id="menu_categoria3" name="Categoría 3" parent="menu_cabys" sequence="33" action="action_categoria3"/>
-	<menuitem id="menu_categoria4" name="Categoría 4" parent="menu_cabys" sequence="34" action="action_categoria4"/>
-	<menuitem id="menu_categoria5" name="Categoría 5" parent="menu_cabys" sequence="35" action="action_categoria5"/>
-	<menuitem id="menu_categoria6" name="Categoría 6" parent="menu_cabys" sequence="36" action="action_categoria6"/>
-	<menuitem id="menu_categoria7" name="Categoría 7" parent="menu_cabys" sequence="37" action="action_categoria7"/>
-	<menuitem id="menu_categoria8" name="Categoría 8" parent="menu_cabys" sequence="38" action="action_categoria8"/>
-	<menuitem id="menu_producto"   name="Catálogo Cabys"   parent="menu_cabys" sequence="39" action="action_productos"/>
+	<menuitem id="menu_categoria1" name="Categoría 1" parent="account.account_account_menu" sequence="31" action="action_categoria1"/>
+	<menuitem id="menu_categoria2" name="Categoría 2" parent="account.account_account_menu" sequence="32" action="action_categoria2"/>
+	<menuitem id="menu_categoria3" name="Categoría 3" parent="account.account_account_menu" sequence="33" action="action_categoria3"/>
+	<menuitem id="menu_categoria4" name="Categoría 4" parent="account.account_account_menu" sequence="34" action="action_categoria4"/>
+	<menuitem id="menu_categoria5" name="Categoría 5" parent="account.account_account_menu" sequence="35" action="action_categoria5"/>
+	<menuitem id="menu_categoria6" name="Categoría 6" parent="account.account_account_menu" sequence="36" action="action_categoria6"/>
+	<menuitem id="menu_categoria7" name="Categoría 7" parent="account.account_account_menu" sequence="37" action="action_categoria7"/>
+	<menuitem id="menu_categoria8" name="Categoría 8" parent="account.account_account_menu" sequence="38" action="action_categoria8"/>
+	<menuitem id="menu_producto"   name="Catálogo Cabys" parent="account.account_account_menu" sequence="39" action="action_productos"/>
 
-</data></odoo>
+</data>
+</odoo>
