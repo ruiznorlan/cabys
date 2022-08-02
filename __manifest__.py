@@ -5,7 +5,7 @@
     'author': 'info@fakturacion.com',
     'website': "https://github.com/odoocr/cabys",
     'category': 'Account',
-    'version': '15.0.1.0.0',
+    'version': '16.0.1.0.0',
     'license': 'OPL-1',
     'depends': [
         'base', 'product',
@@ -17,6 +17,7 @@
         'views/product_template_views.xml',
         'views/product_category_views.xml',
         'views/res_company_views.xml',
+        'wizard/cabys_catalog_import_wizard.xml',
         'security/ir.model.access.csv'
     ],
     'assets': {
