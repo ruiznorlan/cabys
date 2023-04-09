@@ -9,7 +9,7 @@
     'license': 'OPL-1',
     'depends': [
         'base',
-        'account'
+        'account',
         'product',
     ],
     'data': [
