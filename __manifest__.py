@@ -23,12 +23,12 @@
         'security/ir.model.access.csv'
     ],
     'assets': {
-                'web.assets_backend': [
-                    'cabys/static/src/js/cabys_import_button.js'
-                ],
-                'web.assets_qweb': [
-                    'cabys/static/src/xml/**/*',
-                ]
+        'web.assets_backend': [
+            'cabys/static/src/js/cabys_import_button.js'
+        ],
+        'web.assets_qweb': [
+            'cabys/static/src/xml/**/*',
+        ]
     },
     'installable': True,
 }
