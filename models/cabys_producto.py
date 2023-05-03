@@ -26,6 +26,12 @@ class CabysProducto(models.Model):
     product_ids = fields.One2many('product.template', 'cabys_product_id', string='Productos con este código')
     category_ids = fields.One2many('product.category', 'cabys_product_id', string='Categorias con este código')
 
+    first_description = fields.Text(
+        string='Nota explicativa 1. Incluye'
+    )
+    second_description = fields.Text(
+        string='Nota explicativa 2. Excluye'
+    )
 
     _sql_constraints = [('codigo_uniq', 'unique (codigo)', 'Ya existe un registro con el mismo código.'),]
 
