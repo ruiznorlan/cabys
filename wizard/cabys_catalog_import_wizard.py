@@ -148,7 +148,7 @@ class CabysCatalogImportWizard(models.TransientModel):
     notes = fields.Text("Descripción", readonly=True)
     button_enable = fields.Boolean()
     file_url = fields.Char(
-        default='https://www.bccr.fi.cr/indicadores-economicos/cabys/Catalogo-de-bienes-servicios.xlsx'
+        default='https://www.bccr.fi.cr/indicadores-economicos/cabys/Cabys_catalogo_historial_de_cambios.xlsx'
     )
 
     def download_catalog(self):
